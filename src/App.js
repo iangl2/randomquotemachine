@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [quote, setQuote] = useState(0);
 const [author, setAuthor] = useState(0);
-const [link, setLink] = useState(0);
+
 const changeColor = () =>{
 
   var symbols, color;
@@ -50,9 +50,7 @@ useEffect(() => {
     )
     changeColor();
   }
-  const createLink = () =>{
-    setLink('https://twitter.com/intent/tweet?text='+'"'+quote+ '"' + ' - ' +author)
-  }
+
   return (
     <div className="App"
  id="container"
@@ -68,7 +66,7 @@ useEffect(() => {
       </div>
     
 
-      <a id="tweet-quote" onClick={createLink} href="https://twitter.com/intent/tweet" target="_blank">
+      <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank" rel="noreferrer">
      <div id="tweet-quote-container"> 
      
       <img alt="twitter logo" id="twitter-logo"src="https://www.pinclipart.com/picdir/big/578-5789236_logo-twitter-png-blanc-white-twitter-logo-transparent.png"/>
